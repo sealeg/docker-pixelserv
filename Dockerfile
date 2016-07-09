@@ -2,10 +2,9 @@ FROM centos:7
 MAINTAINER Giles Thomas <giles@lemonman.org.uk>
 
 RUN yum -y update && \
-    yum -y install perl && \
     yum clean all
 
-COPY pixelserv.pl /usr/local/bin/pixelserv
+COPY pixelserv.py /usr/local/bin/pixelserv
 RUN  chmod 755 /usr/local/bin/pixelserv
 
 RUN useradd -ms /bin/bash pixelserv
